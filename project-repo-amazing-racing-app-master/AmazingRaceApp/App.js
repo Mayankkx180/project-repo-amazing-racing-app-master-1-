@@ -10,7 +10,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 //import AsyncStorage from '@react-native-community/async-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import MainScreenStack from "./Screens/MainScreenStack";
 const Stack= createStackNavigator();
 const App = () => 
 {
@@ -38,7 +38,10 @@ const App = () =>
     else if (isFirstlaunch==true)
     {
         return (
-            <NavigationContainer>
+            <NavigationContainer> 
+                <MainScreenStack/>
+
+                {/*
                 <Stack.Navigator initialRoutename ='OnboardingScreen'>
                 <Stack.Screen name= 'OnboardingScreen' component={OnboardingScreen}/>
                     <Stack.Screen name ='HomeScreen' component={HomeScreen}/>
@@ -47,6 +50,7 @@ const App = () =>
                     <Stack.Screen name ='TutorialScreen' component={TutorialScreen}/>
                  
                 </Stack.Navigator>
+                */}
             </NavigationContainer>
         );
     }
